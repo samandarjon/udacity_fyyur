@@ -222,7 +222,6 @@ class Show(db.Model):
 
     @property
     def shows(self):
-        # artist = crud.get_artist_by_id(self.artist_id)
         return {
             'artist_id': self.Artist.id,
             "artist_name": self.Artist.name,
