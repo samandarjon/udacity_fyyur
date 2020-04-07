@@ -39,7 +39,6 @@ def search_venues():
 def show_venue(venue_id):
     venue = service.get_venue_by_id(venue_id)
     data = {"": venue.complete}
-    print(data)
     return render_template('pages/show_venue.html', venue=data[""])
 
 

@@ -108,14 +108,6 @@ def get_all_shows():
     return Show.query.order_by(Show.start_time.desc()).all()
 
 
-def get_shows_by_venue_id(venue_id):
-    return Show.query.filter_by(venue_id=venue_id).all()
-
-
-def get_shows_by_artist_id(artist_id):
-    return Show.query.filter_by(venue_id=artist_id).all()
-
-
 def get_past_shows_at_venue(venue_id):
     return db.session.query(Show).filter(
         Show.start_time < datetime.datetime.now(),

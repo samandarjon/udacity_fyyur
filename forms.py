@@ -131,7 +131,7 @@ class VenueForm(FlaskForm):
         'website', validators=[DataRequired()]
     )
     seeking_talent = BooleanField(
-        'seeking_venue', validators=[DataRequired()]
+        'seeking_venue'
     )
     seeking_description = StringField(
         'seeking_description', validators=[DataRequired()]
@@ -170,7 +170,7 @@ class ArtistForm(FlaskForm):
         'website', validators=[DataRequired()]
     )
     seeking_venue = BooleanField(
-        'seeking_venue', validators=[DataRequired()]
+        'seeking_venue'
     )
     seeking_description = StringField(
         'seeking_description', validators=[DataRequired()]

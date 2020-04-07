@@ -40,9 +40,9 @@
           <label for="website">Website</label>
           {{ form.website(class_ = 'form-control', placeholder='http://', value=artist.website, autofocus = true) }}
       </div>
-      <div class="form-seeking_venue">
+      <div class="form-check">
           <label for="seeking_venue">Seeking Venue?</label>
-          {{ form.seeking_venue(class_ = 'form-control', checked=artist.seeking_venue, autofocus = true) }}
+          {{ form.seeking_venue(class_ = 'form-check-input', checked=artist.seeking_venue, autofocus = true) }}
       </div>
       <div class="form-seeking_description">
           <label for="seeking_description">Seeking description </label>
