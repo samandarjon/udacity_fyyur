@@ -12,24 +12,12 @@ venue = Blueprint('venue', __name__, template_folder='templates')
 
 @venue.route('/venues')
 def venues():
-    page = int(request.args.get('page', 1))
-    per_page = 5
-    offset = (page - 1) * per_page
     data = [v.local for v in service.get_venues_locals()]
-    print(data)
     for d in data:
         d["venues"] = [
             v.serialize for v in service.get_venue_by_local(d["city"], d["state"])
         ]
-    q = request.args.get('q')
-    print(data)
-    search = False
-    if q:
-        search = True
-    pagination = Pagination(page=page, per_page=per_page, offset=offset,
-                            total=len(service.get_all_venues()), css_framework='bootstrap3',
-                            search=search)
-    return render_template('pages/venues.html', areas=data, pagination=pagination)
+    return render_template('pages/venues.html', areas=data)
 
 
 @venue.route('/venues/search', methods=['POST'])
