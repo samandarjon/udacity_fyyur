@@ -1,7 +1,4 @@
-from builtins import Exception
-
 from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
-from flask_paginate import Pagination
 
 import service
 from forms import VenueForm

@@ -1,10 +1,11 @@
 import re
 from datetime import datetime
+
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, SelectMultipleField
 from wtforms import DateTimeField, BooleanField
+from wtforms import StringField, SelectField, SelectMultipleField
 from wtforms.fields.html5 import URLField
-from wtforms.validators import DataRequired, URL, NumberRange, ValidationError
+from wtforms.validators import DataRequired, NumberRange
 
 state_choices = [
     ('AL', 'AL'),
