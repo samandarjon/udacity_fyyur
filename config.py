@@ -8,7 +8,7 @@ class Config(object):
 
     DEBUG = True
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:smndr2013@localhost:5432/db_fyyur'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:<password>@localhost:5432/db_fyyur'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO =True
